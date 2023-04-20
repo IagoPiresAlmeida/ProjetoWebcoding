@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        function salvarForm()
+        {
+           if (localStorage.cont) {
+              localStorage.cont = Number(localStorage.cont)+1;
+           } else {
+              localStorage.cont = 1;
+           }
+           const key = "criptografia";
+           const password = document.getElementById('senha').value;
+           const encryptedPassword = CryptoJS.AES.encrypt(password, key).toString();
+           const usuario = document.getElementById('nome').value +
+           ' / ' +
+           document.getElementById('email').value +
+           ' / ' +
+           encryptedPassword +
+           ' / ' +
+           document.getElementById('cpf').value +
+           ' / ' +
+           document.getElementById('nascimento').value;
+
+           localStorage.setItem("Usuário " + localStorage.cont + " ->", usuario);
+        }
+        
+    </script>
+    <script>
+        function formatarCPF(cpfInput) {
+  let cpf = cpfInput.value;
+  cpf = cpf.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona um ponto após o terceiro dígito
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona outro ponto após o sexto dígito
+  cpf = cpf.replace(/(\d{3})(\d{2})$/, '$1-$2'); // Adiciona um traço após o nono dígito
+  cpfInput.value = cpf;
+}
+function formatarDATA(dataInput) {
+    let data = dataInput.value;
+    data = data.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+
+    data = data.replace(/^(\d{2})(\d)/, function (match, p1, p2) {
+        // Adiciona outra barra após o segundo dígito, limita o primeiro valor a 31
+        p1 = (p1 > 31 ? '31' : p1);
+        return p1 + '/' + (p2 ? + p2 : '' + '/');
+    });     
+    data = data.replace(/^(\d{2})\/(\d{2})(\d)/, function (match, p1, p2, p3) {
+        // Adiciona outra barra após o quarto dígito, limita o segundo valor a 12
+        p1 = (p1 > 31 ? '31' : p1);
+        p2 = (p2 > 12 ? '12' : p2);
+        return p1 + '/' + p2 + (p3 ? '/' + p3 : '');
+    });
+    data = data.replace(/^(\d{2})\/(\d{2})\/(\d{4}).*/, function (match, p1, p2, p3) {
+        // Limita o terceiro valor até 2023
+        p1 = (p1 > 31 ? '31' : p1);
+        p2 = (p2 > 12 ? '12' : p2);
+        p3 = (p3 > 2023 ? '2023' : p3);
+        return p1 + '/' + p2 + '/' + p3;
+    });
+    dataInput.value = data;
+}
+    </script>
+               
+</head>
+
+<body class="background">
+	<style>
+		body {
+			background-image: url("https://www.solidbackgrounds.com/images/1920x1080/1920x1080-gray-solid-color-background.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	</style>
+    
+    <div class="box">
+        <img class="img" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-gray-solid-color-background.jpg" >
+        <p class="title">Cadastro</p>
+        <input type="text" id="nome" maxlength="40" placeholder=" Nome">
+        <input type="email" id="email" maxlength="40" placeholder=" E-mail">
+        <input type="password" maxlength="12" id="senha" placeholder=" Senha">
+        <input type="password" maxlength="12" placeholder=" Confirme a senha">
+        <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required name="cpf" id="cpf" placeholder="CPF" oninput="formatarCPF(this)">
+        <input type="DATA" pattern="\d{2}\/\d{2/}\/\d{4}" maxlength="10" required name="data" id="data" placeholder="dd/mm/aaaa" oninput="formatarDATA(this)">
+      
+        <p class="link">Já possui conta? <a class="link2" href="login.html">Fazer Login</a></p>          
+        <button class="button" id="btCadastar-se" onclick="salvarForm()" >Cadastrar-se</button>
+        
+        <P class="Copyright">	&copy; Copyright 2023. Todos os direitos reservados.</P>
+    </div>
+</body>
+    
+    
+</html>
