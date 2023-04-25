@@ -1,0 +1,123 @@
+input{
+    width: 85%;
+    height: 30px;
+    margin-top: 4%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 2px 5px #815d4a;
+    opacity: 0.8;
+    padding-left: 8px;
+    padding-right: 8px;    
+}
+.date{
+    color: rgb(124, 124, 124); 
+}
+.img{
+    width: 160px;
+    height: 110px;
+    
+           
+}
+
+.link{
+    margin-top: 2%;
+    color: rgb(46, 46, 46);
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;   
+}
+.link2{
+    color: #815d4a;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+}
+.link2:hover{
+    color: #815d4a;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+
+}
+.button{
+    width: 80%;
+    height: 32px;
+    margin-top: 3%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #52250e;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 2px 20px darkgray;
+    color:rgb(255, 255, 255);
+    transition: 0.3s;
+      
+}
+.button:hover{
+    background-color: #976044;
+}
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    background-color: Gainsboro;
+    width: 330px;
+    height: 530px;
+    border-radius: 10px;
+    background-color: rgba(220, 220, 220, 0.9);    
+}
+.box2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    background-color: Gainsboro;
+    width: 330px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: rgba(220, 220, 220, 0.9);    
+}
+.Copyright{
+   font-size: 10px;
+   color: rgb(46, 46, 46);
+   font-weight: lighter;
+   font-family: 'Poppins', sans-serif;  
+}
+.error-message{
+    color:        rgb(255, 138, 138);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;  
+    font-weight: bold;
+}
+
+.mensagem-cadastro{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin: 0%;
+    color: rgb(128, 255, 134);
+    text-shadow: 1px 1px 1px #000;
+}
+.mensagemLogin{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin: 0%;
+    color: rgb(128, 255, 134);
+    text-shadow: 1px 1px 1px #000;
+}

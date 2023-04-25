@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Temptation</title>
+    <link rel="icon" href="../img/mini-logo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="/cadastro.js"></script>
+</head>
+
+<body class="background">
+    <style>
+        body {
+            background-image: url("../img/back.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+
+    <div class="box">
+        <img class="img" src="../img/logo sweet.png">
+        
+        <input type="text" id="nome" maxlength="40" placeholder=" Nome" >
+
+        <input type="email" id="email" maxlength="40" placeholder=" E-mail">
+
+        <input type="password" maxlength="10" id="senha" placeholder=" Senha">
+
+        <input type="password" maxlength="10" id="confirmarSenha" placeholder=" Confirme a senha">
+
+        <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required name="cpf" id="cpf" placeholder="CPF" oninput="formatarCPF(this)">
+
+        <input type="DATA" pattern="\d{2}\/\d{2}\/\d{4}" maxlength="10" required name="data" id="data" placeholder="dd/mm/aaaa" oninput="formatarDATA(this)">
+
+
+        <p class="link">Já possui conta? <a class="link2" href="login.html">Fazer Login</a></p>
+        <button class="button" id="btCadastar-se" onclick="salvarForm()">Cadastrar-se</button>
+        <p id="mensagemCadastro" class="mensagem-cadastro"></p>
+
+
+        <P class="Copyright">&copy; Copyright 2023. Todos os direitos reservados.</P>
+    </div>
+</body>
+
+</html>
