@@ -44,6 +44,8 @@ const usuarioEncontrado = usuarios.find(usuario => {
     }
 }
 
+
+
 const exibirErro = (mensagem) => {
     const errorContainer = document.getElementById('error-container');
     errorContainer.textContent = mensagem;

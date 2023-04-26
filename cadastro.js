@@ -93,23 +93,23 @@ function formatarCPF(cpfInput) {
     cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona outro ponto após o sexto dígito
     cpf = cpf.replace(/(\d{3})(\d{2})$/, '$1-$2'); // Adiciona um traço após o nono dígito
     cpfInput.value = cpf;
-  }
-  
-  function formatarDATA(dataInput) {
+}
+
+function formatarDATA(dataInput) {
     let data = dataInput.value;
     data = data.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-  
+
     data = data.replace(/^(\d{2})(\d)/, function (match, p1, p2) {
       // Adiciona outra barra após o segundo dígito, limita o primeiro valor a 31
-      p1 = (p1 > 31 ? '31' : p1);
-      return p1 + '/' + (p2 ? + p2 : '' + '/');
+    p1 = (p1 > 31 ? '31' : p1);
+    return p1 + '/' + (p2 ? + p2 : '' + '/');
     });
   
     data = data.replace(/^(\d{2})\/(\d{2})(\d)/, function (match, p1, p2, p3) {
       // Adiciona outra barra após o quarto dígito, limita o segundo valor a 12
-      p1 = (p1 > 31 ? '31' : p1);
-      p2 = (p2 > 12 ? '12' : p2);
-      return p1 + '/' + p2 + (p3 ? '/' + p3 : '');
+    p1 = (p1 > 31 ? '31' : p1);
+    p2 = (p2 > 12 ? '12' : p2);
+    return p1 + '/' + p2 + (p3 ? '/' + p3 : '');
     });
   
     data = data.replace(/^(\d{2})\/(\d{2})\/(\d{4}).*/, function (match, p1, p2, p3) {
@@ -121,42 +121,42 @@ function formatarCPF(cpfInput) {
     });
   
     dataInput.value = data;
-  }
+}
 
-  let btn_nome = document.getElementById('nome')
-  let btn_email = document.getElementById('email')
-  let btn_senha = document.getElementById('senha')
-  let btn_confirmarSenha = document.getElementById('confirmarSenha')
-  let btn_cpf = document.getElementById('cpf')
-  let btn_data = document.getElementById('data')
+let btn_nome = document.getElementById('nome')
+let btn_email = document.getElementById('email')
+let btn_senha = document.getElementById('senha')
+let btn_confirmarSenha = document.getElementById('confirmarSenha')
+let btn_cpf = document.getElementById('cpf')
+let btn_data = document.getElementById('data')
 
-  btn_nome.addEventListener('keypress', (event) => {
-      if (event.key == "Enter"){
+btn_nome.addEventListener('keypress', (event) => {
+    if (event.key == "Enter"){
         salvarForm();
-      }
-  })
-  btn_email.addEventListener('keypress', (event) => {
-      if (event.key == "Enter"){
+    }
+})
+btn_email.addEventListener('keypress', (event) => {
+    if (event.key == "Enter"){
         salvarForm();
-      }
-  })
-  btn_senha.addEventListener('keypress', (event) => {
-      if (event.key == "Enter"){
+    }
+})
+btn_senha.addEventListener('keypress', (event) => {
+    if (event.key == "Enter"){
         salvarForm();
-      }
-  })
-  btn_confirmarSenha.addEventListener('keypress', (event) => {
-      if (event.key == "Enter"){
+    }
+})
+btn_confirmarSenha.addEventListener('keypress', (event) => {
+    if (event.key == "Enter"){
         salvarForm();
-      }
-  })
-  btn_cpf.addEventListener('keypress', (event) => {
-      if (event.key == "Enter"){
+    }
+})
+btn_cpf.addEventListener('keypress', (event) => {
+    if (event.key == "Enter"){
         salvarForm();
-      }
-  })
-  btn_data.addEventListener('keypress', (event) => {
-      if (event.key == "Enter"){
+    }
+})
+btn_data.addEventListener('keypress', (event) => {
+    if (event.key == "Enter"){
         salvarForm();
-      }
-  })
+    }
+})
