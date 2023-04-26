@@ -114,12 +114,49 @@ function formatarCPF(cpfInput) {
   
     data = data.replace(/^(\d{2})\/(\d{2})\/(\d{4}).*/, function (match, p1, p2, p3) {
       // Limita o terceiro valor até 2023
-      p1 = (p1 > 31 ? '31' : p1);
-      p2 = (p2 > 12 ? '12' : p2);
-      p3 = (p3 > 2023 ? '2023' : p3);
-      return p1 + '/' + p2 + '/' + p3;
+    p1 = (p1 > 31 ? '31' : p1);
+    p2 = (p2 > 12 ? '12' : p2);
+    p3 = (p3 > 2023 ? '2023' : p3);
+    return p1 + '/' + p2 + '/' + p3;
     });
   
     dataInput.value = data;
   }
-  
+
+  let btn_nome = document.getElementById('nome')
+  let btn_email = document.getElementById('email')
+  let btn_senha = document.getElementById('senha')
+  let btn_confirmarSenha = document.getElementById('confirmarSenha')
+  let btn_cpf = document.getElementById('cpf')
+  let btn_data = document.getElementById('data')
+
+  btn_nome.addEventListener('keypress', (event) => {
+      if (event.key == "Enter"){
+        salvarForm();
+      }
+  })
+  btn_email.addEventListener('keypress', (event) => {
+      if (event.key == "Enter"){
+        salvarForm();
+      }
+  })
+  btn_senha.addEventListener('keypress', (event) => {
+      if (event.key == "Enter"){
+        salvarForm();
+      }
+  })
+  btn_confirmarSenha.addEventListener('keypress', (event) => {
+      if (event.key == "Enter"){
+        salvarForm();
+      }
+  })
+  btn_cpf.addEventListener('keypress', (event) => {
+      if (event.key == "Enter"){
+        salvarForm();
+      }
+  })
+  btn_data.addEventListener('keypress', (event) => {
+      if (event.key == "Enter"){
+        salvarForm();
+      }
+  })

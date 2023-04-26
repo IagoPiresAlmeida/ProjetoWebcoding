@@ -34,20 +34,26 @@ input{
 .link{
     margin-top: 2%;
     color: rgb(46, 46, 46);
-    font-weight: lighter;   
-    font-size: small;   
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
 }
 .link2{
-    color: #815d4a;
+    color: #976044;
     text-decoration: none;
-    font-weight: bold;    
-    font-size: small;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    transform: 0.3s;
+
 }
 .link2:hover{
-    color: #815d4a;
+    color: #52250e;
     text-decoration: none;
-    font-weight: bold;    
-    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+
+
 
 }
 .button{
@@ -57,15 +63,17 @@ input{
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    background-color: #52250e;
-    font-weight: bold;    
+    background-color: #976044;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
     box-shadow: 0px 2px 20px darkgray;
     color:rgb(255, 255, 255);
     transition: 0.3s;
-}
 
+}
 .button:hover{
-    background-color: #976044;
+    background-color: #52250e;
+
 }
 
 .background{
