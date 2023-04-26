@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
 
+
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Oswald', sans-serif;/*Se for trocar a fonte troca isso aqui*/
+    font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
 }
 
-body {
-  background-image: url("../img/back.jpg");
-  background-size: cover;
-  background-position: center center;
+body{
+    background-image: url("../img/back.jpg");
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center center;
 }
-
 header {
     background-color: #613a29;
     box-shadow: 0px 0px 5px;
@@ -45,9 +46,9 @@ header {
 
 .linknav{
     text-decoration: none;
-    font-size: 1.15rem;/*Aqui se usa fonte também*/
+    font-size: 1.15rem;
     color: white;
-    font-weight: 400;/*Aqui pode dar problema se tu não importou fonte do mesmo peso*/
+    font-weight: 400;
     padding: 20px;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -63,8 +64,8 @@ header {
 .login-btn button a {
     text-decoration: none;
     color: white;
-    font-weight: 500;/*Aqui pode dar problema se tu não importou fonte do mesmo peso²*/
-    font-size: 1.2rem/*Aqui se usa fonte também²*/
+    font-weight: 500;
+    font-size: 1.2rem
 }
 
 nav li a:hover {
@@ -90,9 +91,10 @@ nav li a:hover {
     justify-content: center;
     min-height: 65vh;
 }
+
 .wrapper {
     display: flex;
-    max-width: 1200px;/*Aumenta o tamanho que o carousel ocupa na tela*/
+    max-width: 1560px;
     position: relative;
 }
 
@@ -102,7 +104,7 @@ nav li a:hover {
     width: 46px;
     cursor: pointer;
     position: absolute;
-    font-size: 1.2rem;/*Icone*/
+    font-size: 1.2rem;
     text-align: center;
     line-height: 46px;
     background-color: white;
@@ -129,7 +131,7 @@ nav li a:hover {
 }
 
 .wrapper .carousel{
-    font-size: 0;/*Icone*/
+    font-size: 0;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
@@ -151,11 +153,90 @@ nav li a:hover {
     object-fit: cover;
     user-select: none;
     margin-left:14px;
-    width: calc(100%/3);/*Mudar quantas imagens aparecem na tela*/
+    width: calc(100%/5);
 }
 
 .carousel img:first-child{
     margin-left: 0px;
+}
+
+.col-4 img{
+    width: 250px;
+}
+
+/*Produtos*/
+
+.divteste{
+    width: 100%;
+}
+
+    .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d8cbc4;
+    padding: 1em;
+    margin: 10px;  
+    border-radius: 5px;
+    min-width: 250px;
+    text-align: center;
+}
+
+    
+.product-img img {
+    width: 100px;
+    height: 150px;
+}
+
+.product-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10 px;
+}
+
+.product-price {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: green;
+}
+
+.buy-button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1366px){
+    .wrapper{
+        max-width: 1200;
+    }
+
+    .carousel img{
+        width: calc(100%/4);
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .carousel img{
+        width: calc(100%/3);
+    }
 }
 
 @media screen and (max-width: 900px){
@@ -180,7 +261,7 @@ nav li a:hover {
     }
 
     .mobile-micon button{
-
+        
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -221,8 +302,9 @@ nav li a:hover {
     }
 }
 
-    @media screen and (max-width: 400px){
+    @media screen and (max-width: 450px){
         .carousel img{
             width: calc(100%);
         }
     }
+

@@ -49,4 +49,13 @@ const exibirErro = (mensagem) => {
     errorContainer.textContent = mensagem;
     
     
-};
+}
+
+// Adicione um event listener no input de senha
+document.getElementById('submit').addEventListener('keyup', function(event) {
+    // Verifica se a tecla pressionada é a tecla Enter
+    if (event.keyCode === 13) {
+      // Chama a função salvarForm() para submeter o cadastro
+    salvarForm();
+    }
+});
