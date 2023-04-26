@@ -5,13 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <p>home</p>  
-    </header>
-     
-</body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="#"><img src="/Imagens/LOGO_BOLOS1.png" width="45px" height="45px"></a>
+            </div>
 
+            <div class="item-nav">
+                <ul>
+                    <li><a href="#" class="linknav">Cardapio</a></li>
+                    <li><a href="#" class="linknav">Alguma</a></li>
+                    <li><a href="#" class="linknav">Sobre</a></li>
+                </ul>
+            </div>
+
+            <div class="login-btn">
+                <button><a href="/html/login.html">Entrar</a></button>
+            </div>
+
+            <div class="mobile-micon">
+                <button onclick="aparecer()"><img class="icone" src="/Imagens/menubranco.jpg" alt="" width="36" height="45"></button>
+            </div>
+        </nav>
+
+        <div class="mobile">
+
+            <ul>
+                <li><a href="#" class="linknav">Cardapio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="linknav">Alguma</a>
+
+                    <!--<ul>
+                        <li>Kit Festa</li>
+                        <li>Doces</li>
+                        <li>Salgados</li>
+                    </ul>-->
+                </li>                           
+                <li><a href="#" class="linknav">Sobre</a></li>
+            </ul>
+
+            <div class="login-btn">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                <img src="/Imagens/bolo1.png" alt="" >
+                <img src="/Imagens/bolo2.png" alt="" >
+                <img src="/Imagens/bolo3.png" alt="" >
+                <img src="/Imagens/bolo4.png" alt="" >
+                <img src="/Imagens/bolo5.png" alt="" >
+                <img src="/Imagens/bolo6.png" alt="" >
+                <img src="/Imagens/bolo7.png" alt="" >
+                <img src="/Imagens/bolo8.png" alt="" >
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </main>
+
+    <script src="../js/home.js"></script>
+</body>
 </html>
