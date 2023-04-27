@@ -9,29 +9,38 @@
 }
 
 body{
-    background-image: url("../img/back.jpg");
+    background-image: url("../img/Sem\ Título-1.jpg");
             background-size: cover;
             background-repeat: repeat;
             background-position: center center;
 }
 header {
-    background-color: #613a29;
-    box-shadow: 0px 0px 5px;
+    margin-bottom: 30px;
+    height: 150px;
+    justify-content: center;
 }
 
 .nav-bar {
+    height: 150px;
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 3rem;
+    background-image: url("../img/header.png");
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center center;
 }
 
 .logo{
     display: flex;
     align-items: center;
+    margin-bottom: 5%;
+    
 }
 .item-nav{
     display: flex;
     align-items: center;
+    margin-bottom: 5%;
 }
 
 .item-nav ul {
@@ -70,8 +79,9 @@ header {
 
 nav li a:hover {
     background-color: #3d251e;
-    padding-top: 38px;
-    padding-bottom: 36px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
 }
 
 .mobile-micon {
@@ -90,12 +100,15 @@ nav li a:hover {
     align-items: center;
     justify-content: center;
     min-height: 65vh;
+    
+    
 }
 
 .wrapper {
     display: flex;
     max-width: 1560px;
     position: relative;
+    
 }
 
 .wrapper i{
@@ -111,6 +124,8 @@ nav li a:hover {
     border-radius: 50%;
     transform: translateY(-50%);
     transition: transform 0.1s linear;
+    
+   
 }
 
 .wrapper i:active{
@@ -136,6 +151,7 @@ nav li a:hover {
     overflow: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
+    border-radius: 10px;
 
 }
 
@@ -154,6 +170,7 @@ nav li a:hover {
     user-select: none;
     margin-left:14px;
     width: calc(100%/5);
+    border-radius: 10px;
 }
 
 .carousel img:first-child{
@@ -162,6 +179,16 @@ nav li a:hover {
 
 .col-4 img{
     width: 250px;
+}
+.box-tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tittle{
+    color: #381e13;
+    font-size: 50px ;
+    
 }
 
 /*Produtos*/
@@ -175,6 +202,7 @@ nav li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .product-item {
@@ -231,11 +259,17 @@ nav li a:hover {
     .carousel img{
         width: calc(100%/4);
     }
+    .logo{
+        margin-bottom: 5%;
+    }
 }
 
 @media screen and (max-width: 1150px){
     .carousel img{
         width: calc(100%/3);
+    }
+    .logo{
+        margin-bottom: 5%;
     }
 }
 
@@ -246,6 +280,9 @@ nav li a:hover {
 
     .item-nav {
         display: none;
+    }
+    .logo{
+        margin-bottom: 5%;
     }
 
     .login-btn{
@@ -305,6 +342,9 @@ nav li a:hover {
     @media screen and (max-width: 450px){
         .carousel img{
             width: calc(100%);
+        }
+        .logo{
+            margin-bottom: 5%;
         }
     }
 
