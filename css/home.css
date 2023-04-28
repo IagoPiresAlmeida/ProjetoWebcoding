@@ -16,8 +16,10 @@ body{
 }
 header {
     margin-bottom: 30px;
-    height: 150px;
+    height: 100px;
     justify-content: center;
+    background-color: #633826;
+    box-shadow: 0px 4px 10px #633826;
 }
 
 .nav-bar {
@@ -25,16 +27,13 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 3rem;
-    background-image: url("../img/header.png");
-            background-size: cover;
-            background-repeat: repeat;
-            background-position: center center;
+    
 }
 
 .logo{
     display: flex;
     align-items: center;
-    margin-bottom: 5%;
+    
     
 }
 .item-nav{
@@ -102,6 +101,7 @@ nav li a:hover {
     min-height: 65vh;
     
     
+    
 }
 
 .wrapper {
@@ -124,8 +124,6 @@ nav li a:hover {
     border-radius: 50%;
     transform: translateY(-50%);
     transition: transform 0.1s linear;
-    
-   
 }
 
 .wrapper i:active{
@@ -152,7 +150,6 @@ nav li a:hover {
     white-space: nowrap;
     scroll-behavior: smooth;
     border-radius: 10px;
-
 }
 
 .carousel.dragging{
@@ -186,9 +183,9 @@ nav li a:hover {
     justify-content: center;
 }
 .tittle{
-    color: #381e13;
+    color: #72402a;
     font-size: 50px ;
-    
+    text-shadow: 1px 2px 1px #000000;  
 }
 
 /*Produtos*/
@@ -202,7 +199,7 @@ nav li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }
 
 .product-item {
@@ -215,9 +212,9 @@ nav li a:hover {
     border-radius: 5px;
     min-width: 250px;
     text-align: center;
-}
+    box-shadow: 0px 4px 5px #633826;
+}  
 
-    
 .product-img img {
     width: 100px;
     height: 150px;
@@ -260,8 +257,9 @@ nav li a:hover {
         width: calc(100%/4);
     }
     .logo{
-        margin-bottom: 5%;
+        margin-bottom: 50px;
     }
+    
 }
 
 @media screen and (max-width: 1150px){
@@ -269,8 +267,9 @@ nav li a:hover {
         width: calc(100%/3);
     }
     .logo{
-        margin-bottom: 5%;
+        margin-bottom: 50px;
     }
+    
 }
 
 @media screen and (max-width: 900px){
@@ -280,9 +279,6 @@ nav li a:hover {
 
     .item-nav {
         display: none;
-    }
-    .logo{
-        margin-bottom: 5%;
     }
 
     .login-btn{
@@ -337,6 +333,9 @@ nav li a:hover {
     .carousel img{
         width: calc(100%/2);
     }
+    .logo{
+        margin-bottom: 50px;
+    }
 }
 
     @media screen and (max-width: 450px){
@@ -344,7 +343,7 @@ nav li a:hover {
             width: calc(100%);
         }
         .logo{
-            margin-bottom: 5%;
+            margin-bottom: 50px;
         }
     }
 
