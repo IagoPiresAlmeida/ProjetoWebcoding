@@ -15,31 +15,23 @@ body{
             background-position: center center;
 }
 header {
-    margin-bottom: 30px;
-    height: 100px;
-    justify-content: center;
-    background-color: #633826;
-    box-shadow: 0px 4px 10px #633826;
+    background-color: #613a29;
+    box-shadow: 0px 0px 5px;
 }
 
 .nav-bar {
-    height: 150px;
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 3rem;
-    
 }
 
 .logo{
     display: flex;
     align-items: center;
-    
-    
 }
 .item-nav{
     display: flex;
     align-items: center;
-    margin-bottom: 5%;
 }
 
 .item-nav ul {
@@ -248,6 +240,33 @@ nav li a:hover {
     cursor: pointer;
 }
 
+@media screen and (max-height: 800px){
+    header {
+        margin-bottom: 30px;
+        height: 100px;
+        justify-content: center;
+        background-color: #633826;
+        box-shadow: 0px 4px 10px #633826;
+    }
+    
+    .nav-bar {
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 3rem;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;    
+    }
+    .item-nav{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+}
+
 @media screen and (max-width: 1366px){
     .wrapper{
         max-width: 1200;
@@ -347,3 +366,4 @@ nav li a:hover {
         }
     }
 
+    
